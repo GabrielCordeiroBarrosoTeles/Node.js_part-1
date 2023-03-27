@@ -2,22 +2,21 @@
 <%- include('./partials/header.ejs')%>
 <%- include('./partials/navbar.ejs')%>
 <div class="container border mt-5">
-    <h1>Pagina Principal</h1>
-    <a class="btn btn-success text-light">Cadastrar Novo Membro</a>
+    <h1 style="text-align: center;">Pagina Principal</h1>
+    <a class="btn btn-success text-light" style="float: right;">Cadastrar Novo Membro</a>
 
 
-<table class="table table-striped mt-5">
+<table class="table table-striped mt-5" style="text-align: center;">
     <thead>
         <tr>
             <th>Nome</th>
             <th>Email</th>
-            <th>Login</th>
+            <th>Ação</th>
         </tr>
         <% membros.forEach(membro => { %>
         <tr>
             <td><%= membro.nome%></td>
             <td><%= membro.email%></td>
-            <td><%= membro.login%></td>
             <td>
                 <a href="/<%=membro.id %>" class="btn btn-success">Editar</a>
                 <a href="#" class="btn btn-danger">Deletar</a>
