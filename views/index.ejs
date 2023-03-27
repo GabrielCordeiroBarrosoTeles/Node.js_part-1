@@ -4,3 +4,19 @@
     <h1>qugrfh</h1>
 </body>
 <%- include('./partials/footer.ejs')%>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Login</th>
+        </tr>
+        <% membros.forEach(membro => { %>
+        <tr>
+            <th><%= membro.nome%></th>
+            <th><%= membro.email%></th>
+            <th><%= membro.login%></th>
+        </tr>
+        <%});%>
+    </thead>
+</table>
