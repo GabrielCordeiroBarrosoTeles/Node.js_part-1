@@ -1,10 +1,12 @@
+<body>
 <%- include('./partials/header.ejs')%>
 <%- include('./partials/navbar.ejs')%>
-<body>
-    <h1>qugrfh</h1>
-</body>
-<%- include('./partials/footer.ejs')%>
-<table>
+<div class="container border mt-5">
+    <h1>Pagina Principal</h1>
+    <a class="btn btn-success text-light">Cadastrar Novo Membro</a>
+
+
+<table class="table table-striped mt-5">
     <thead>
         <tr>
             <th>Nome</th>
@@ -24,3 +26,6 @@
         <%});%>
     </thead>
 </table>
+<%- include('./partials/footer.ejs')%>
+</div>
+</body>
