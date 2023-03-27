@@ -13,9 +13,13 @@
         </tr>
         <% membros.forEach(membro => { %>
         <tr>
-            <th><%= membro.nome%></th>
-            <th><%= membro.email%></th>
-            <th><%= membro.login%></th>
+            <td><%= membro.nome%></td>
+            <td><%= membro.email%></td>
+            <td><%= membro.login%></td>
+            <td>
+                <a href="/<%=membro.id %>" class="btn btn-success">Editar</a>
+                <a href="#" class="btn btn-danger">Deletar</a>
+            </td>
         </tr>
         <%});%>
     </thead>
