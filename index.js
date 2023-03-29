@@ -9,8 +9,11 @@ connection.authenticate().then(()=>{
    console.log(error)
 });
 
+
 const Membros = require("./Controller/Membro")
 const MembroController = require("./Controller/MembroController")
+
+app.use("/", MembroController);
 
 app.set("view engine",'ejs');
 app.use(express.static("public"));

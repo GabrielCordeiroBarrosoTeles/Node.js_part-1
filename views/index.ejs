@@ -1,30 +1,30 @@
 
-<%- include('./partials/header.ejs')%>
-<%- include('./partials/navbar.ejs')%>
-<div class="container border mt-5">
-    <h1 style="text-align: center;">Pagina Principal</h1>
-    <a class="btn btn-success text-light" style="float: right;">Cadastrar Novo Membro</a>
+    <%- include('./partials/header.ejs')%>
+    <%- include('./partials/navbar.ejs')%>
+    <div class="container border mt-5">
+        <h1 style="text-align: center;">Pagina Principal</h1>
+        <a class="btn btn-success text-light" style="float: right;">Cadastrar Novo Membro</a>
 
 
-<table class="table table-striped mt-5" style="text-align: center;">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Ação</th>
-        </tr>
-        <% membros.forEach(membro => { %>
-        <tr>
-            <td><%= membro.nome%></td>
-            <td><%= membro.email%></td>
-            <td>
-                <a href="/<%=membro.id %>" class="btn btn-success">Editar</a>
-                <a href="#" class="btn btn-danger">Deletar</a>
-            </td>
-        </tr>
-        <%});%>
-    </thead>
-</table>
-<%- include('./partials/footer.ejs')%>
-</div>
-
+    <table class="table table-striped mt-5" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ação</th>
+            </tr>
+            <% membros.forEach(membro => { %>
+            <tr>
+                <td><%= membro.nome%></td>
+                <td><%= membro.email%></td>
+                <td>
+                    <a href="/membros/edit" class="btn btn-success">Editar</a>
+                    <a href="#" class="btn btn-danger">Deletar</a>
+                </td>
+            </tr>
+            <%});%>
+        </thead>
+    </table>
+    <%- include('./partials/footer.ejs')%>
+    </div>
+  
